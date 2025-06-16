@@ -8,7 +8,6 @@ st.write(
   """)
 from snowflake.snowpark.functions import col, when_matched
 from snowflake.snowpark import Session
-session = get_active_session()
 og_dataset = session.table("smoothies.public.orders")
 editable_df = pd.DataFrame([
     {"ORDER_UID": "123", "ORDER_FILLED": "Yes"},
